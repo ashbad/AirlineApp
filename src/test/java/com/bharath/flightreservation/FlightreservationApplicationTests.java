@@ -39,15 +39,15 @@ public class FlightreservationApplicationTests {
 	@Test
 	public void testGenerateItenarary() {
 		Reservation reservation = reservationRepo.findOne(1L);
-		String filePath = "/Users/bharaththippireddy/Documents/reservations/reservation" + reservation.getId() + ".pdf";
+		String filePath = "/Users/ashish/Documents/reservations/reservation" + reservation.getId() + ".pdf";
 		pdfGenerator.generateItinerary(reservation, filePath);
 	}
 
 	@Test
 	public void testEmail() {
 		Reservation reservation = reservationRepo.findOne(1L);
-		String filePath = "/Users/bharaththippireddy/Documents/reservations/reservation" + reservation.getId() + ".pdf";
-		emailUtil.sendItinerary("thippireddy.bharath@gmail.com", filePath);
+		String filePath = "/Users/ashish/Documents/reservations/reservation" + reservation.getId() + ".pdf";
+		emailUtil.sendItinerary("ashu.vishnu@gmail.com", filePath);
 	}
 
 }
